@@ -148,7 +148,6 @@ describe('PaymentMapper', () => {
                 shouldSaveInstrument: true,
                 instrumentId: 'token1',
                 ccCvv: '123',
-                iin: '123456',
                 three_d_secure: { token: 'aaa.bbb.ccc' },
             },
         });
@@ -169,7 +168,6 @@ describe('PaymentMapper', () => {
                     token: data.payment.instrumentId,
                     verification_value: data.payment.ccCvv,
                     credit_card_number_confirmation: data.payment.ccNumber,
-                    iin: data.payment.iin,
                     three_d_secure: data.payment.three_d_secure,
                 },
             })
